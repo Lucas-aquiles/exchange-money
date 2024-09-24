@@ -1,4 +1,4 @@
-package com.exchangemoney
+package com.lucasechegaray.zerorate
 import android.os.Bundle;
 
 

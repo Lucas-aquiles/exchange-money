@@ -1,4 +1,4 @@
-package com.exchangemoney
+package com.lucasechegaray.zerorate
 
 import android.app.Application
 import com.facebook.react.PackageList
