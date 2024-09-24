@@ -1,7 +1,6 @@
 # OSX
 #
 .DS_Store
-app/build/
 
 # Xcode
 #
@@ -34,8 +33,6 @@ local.properties
 .cxx/
 *.keystore
 !debug.keystore
-app/build/outputs/apk/debug/*
-
 
 # node.js
 #
