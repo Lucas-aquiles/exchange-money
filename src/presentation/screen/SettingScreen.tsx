@@ -1,13 +1,29 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Dimensions, Linking, Text, TouchableOpacity, View} from 'react-native';
 import {styles} from '../../config/theme/app-theme';
 import Background from '../components/CustomBackround';
 
 export const SettingScreen = () => {
+  const {width, height} = Dimensions.get('window');
+
+  const handlePress = () => {
+    Linking.openURL('https://rootsoftware.com.ar/politicaslistcompras');
+  };
+
   return (
     <View style={styles.containerScreen}>
       <Background>
-        <Text>SettingaaaScreen</Text>
+        <View style={{position: 'absolute', top: 40}}>
+          <TouchableOpacity onPress={handlePress}>
+            <Text
+              style={{
+                color: 'white',
+                fontSize: width * 0.06,
+              }}>
+              Políticas de Privacidad
+            </Text>
+          </TouchableOpacity>
+        </View>
       </Background>
     </View>
   );

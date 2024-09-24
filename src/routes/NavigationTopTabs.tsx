@@ -6,7 +6,7 @@ import {colors} from '../config/theme/app-theme';
 import {PixelRatio, StyleSheet, Dimensions} from 'react-native';
 
 const Tab = createMaterialTopTabNavigator();
-const {width, height} = Dimensions.get('window'); // Obtener dimensiones de la pantalla
+const {width, height} = Dimensions.get('window');
 
 export const NavigationTopTabs = () => {
   return (
