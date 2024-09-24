@@ -7,7 +7,7 @@ export const SettingScreen = () => {
   return (
     <View style={styles.containerScreen}>
       <Background>
-        <Text>SettingScreen</Text>
+        <Text>SettingaaaScreen</Text>
       </Background>
     </View>
   );

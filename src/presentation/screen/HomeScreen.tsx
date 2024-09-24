@@ -6,8 +6,10 @@ import {
   StyleSheet,
   Image,
   StatusBar,
+  Dimensions,
 } from 'react-native';
 import Background from '../components/CustomBackround';
+const {width, height} = Dimensions.get('window'); // Obtener dimensiones de la pantalla
 
 export const HomeScreen = () => {
   return (
@@ -15,7 +17,7 @@ export const HomeScreen = () => {
       <StatusBar barStyle={'light-content'} backgroundColor={'black'} />
 
       <Background>
-        <Text style={styles.text}>Zero Rate</Text>
+        <Text style={styles.text}>Zero-Rate</Text>
       </Background>
     </View>
   );
@@ -31,9 +33,11 @@ const styles = StyleSheet.create({
     flex: 1, // Permitir que el contenedor ocupe toda la pantalla
   },
   text: {
+    width: width * 0.11,
+
     color: 'white', // Cambia el color según el fondo
-    fontSize: 57,
-    fontFamily: 'Poppins',
+    fontSize: width * 0.13,
+    fontWeight: '800',
   },
   image: {
     flex: 1,
