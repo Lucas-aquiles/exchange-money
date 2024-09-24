@@ -1,10 +1,14 @@
 import React from 'react';
 import {Text, View} from 'react-native';
+import {styles} from '../../config/theme/app-theme';
+import Background from '../components/CustomBackround';
 
 export const SettingScreen = () => {
   return (
-    <View>
-      <Text>SettingScreen</Text>
+    <View style={styles.containerScreen}>
+      <Background>
+        <Text>SettingScreen</Text>
+      </Background>
     </View>
   );
 };
