@@ -80,9 +80,9 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
 
-    backgroundColor: 'rgba(255, 255, 255, 0.15)',
+    backgroundColor: 'rgba(255, 255, 255, 0.10)',
     width: width * 1,
-    marginVertical: height * 0.02,
+    marginBottom: height * 0.15,
     borderRadius: 20,
     shadowOpacity: 0.9,
     opacity: 1, // Opacidad del componente

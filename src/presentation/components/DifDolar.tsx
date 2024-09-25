@@ -15,7 +15,7 @@ const DifDolar = ({compra, venta, moneda, nombre, casa}: PropsDolar) => {
   return (
     <View
       style={{
-        backgroundColor: 'rgba(255, 255, 255, 0.15)',
+        backgroundColor: 'rgba(255, 255, 255, 0.1)',
         width: width * 0.4,
         padding: width * 0.03,
         marginVertical: height * 0.02,
