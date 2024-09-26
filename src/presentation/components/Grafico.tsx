@@ -4,12 +4,20 @@ import {CartesianChart, Line, useChartPressState} from 'victory-native';
 import {Circle, useFont} from '@shopify/react-native-skia';
 import type {SharedValue} from 'react-native-reanimated';
 import inter from '../../assets/fonts/inter_medium.ttf';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {useFetchHistoryData} from '../hooks/useFetchHistoryData';
 const initChartPressState = {x: 0, y: {highTmp: 0}} as const;
-export default function Grafico() {
-  const [shouldUpdate, setShouldUpdate] = useState(false);
 
+interface GraficoProps {
+  change: boolean; // Asegúrate de que sea un booleano
+}
+
+export default function Grafico({change}: GraficoProps) {
+  const [shouldUpdate, setShouldUpdate] = useState(change);
+
+  useEffect(() => {
+    setShouldUpdate(change);
+  }, [change]);
   const {data, isLoading, error} = useFetchHistoryData(
     'https://api.argentinadatos.com/v1/cotizaciones/dolares/blue/',
     shouldUpdate,
