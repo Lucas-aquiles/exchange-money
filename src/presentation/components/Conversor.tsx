@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
     marginBottom: height * 0.15,
     borderRadius: 20,
     shadowOpacity: 0.9,
-    opacity: 1, // Opacidad del componente
+    opacity: 1,
   },
   title: {
     fontSize: 20,

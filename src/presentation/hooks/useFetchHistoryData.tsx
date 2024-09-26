@@ -13,7 +13,7 @@ export const useFetchHistoryData = (url: string, change: boolean) => {
   useEffect(() => {
     const fetchData = async () => {
       setIsLoading(true);
-      setError(null); // Limpiar el estado de error antes de realizar la solicitud
+      setError(null);
       try {
         const response = await fetch(url);
         if (!response.ok) {

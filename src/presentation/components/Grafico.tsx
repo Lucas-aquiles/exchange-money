@@ -30,7 +30,7 @@ export default function Grafico() {
 
   const DATA = (data ? data : newData).map((item, index) => ({
     day: index,
-    highTmp: item.venta, // Usamos 'venta' en lugar de 'highTmp'
+    highTmp: item.venta,
   }));
   return (
     <View
@@ -40,13 +40,11 @@ export default function Grafico() {
         width: '100%',
         backgroundColor: 'rgba(255, 255, 255, 0.1)',
       }}>
-      {/* Muestra el indicador de carga mientras se cargan los datos */}
       {isLoading ? (
         <ActivityIndicator size="large" color="#0000ff" />
       ) : error ? (
         <Text>{error}</Text>
       ) : (
-        // Solo renderiza el gráfico cuando los datos están disponibles
         <CartesianChart
           data={DATA}
           padding={30}
@@ -56,7 +54,7 @@ export default function Grafico() {
           axisOptions={{
             font,
             lineColor: '#f7f7fe',
-            labelColor: '#f7f7fe', // Cambia el color del texto a azul
+            labelColor: '#f7f7fe',
           }}
           chartPressState={[firstPress, secondPress]}>
           {({points}) => (
