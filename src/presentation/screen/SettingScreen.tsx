@@ -7,7 +7,7 @@ export const SettingScreen = () => {
   const {width, height} = Dimensions.get('window');
 
   const handlePress = () => {
-    Linking.openURL('https://rootsoftware.com.ar/politicaslistcompras');
+    Linking.openURL('https://rootsoftware.com.ar/politicasgenerales');
   };
 
   return (

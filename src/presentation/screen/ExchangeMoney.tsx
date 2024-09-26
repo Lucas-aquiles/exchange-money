@@ -15,10 +15,9 @@ import Conversor from '../components/Conversor';
 export const ExchangeMoney = () => {
   const [shouldUpdate, setShouldUpdate] = useState(false);
 
-  // Usa el hook con 'shouldUpdate' como el cambio.
   const {data, isLoading, error} = useFetchExchangeData(
     'https://dolarapi.com/v1/dolares',
-    shouldUpdate, // Cambia esto para disparar el fetch cuando cambie
+    shouldUpdate,
   );
 
   function handleUpdate() {
